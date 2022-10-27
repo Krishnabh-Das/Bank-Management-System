@@ -47,55 +47,61 @@ public:
             cin >> b;
             Sleep(250);
             system("CLS");
-            for (int i = a; i < a + b; i++)
-            {
-                cout << "Account Holder name: " << endl;
-                cin >> name[i];
-                cout << "Create new password: " << endl;
-                cin >> password[i];
-                cout << "Enter the amount: " << endl;
-                cin >> amount[i];
-                s++;
-                if ((s == 1) && (b > 1))
+            if(b > 0){
+                for (int i = a; i < a + b; i++)
                 {
-                    cout << "1st ";
-                }
-                else if ((s == 2) && (b > 1))
-                {
-                    cout << "2nd ";
-                }
-                else if ((s == 3) && (b > 1))
-                {
-                    cout << "3rd ";
-                }
-                else if ((s > 3) && (b > 1))
-                {
-                    cout << i+1 << "th ";
-                }
-                if (b > 1)
-                {
-                    cout << "Account is created" << endl;
-                    for (int i = 0; i < 4; i++)
+                    cout << "Account Holder name: " << endl;
+                    cin >> name[i];
+                    cout << "Create new password: " << endl;
+                    cin >> password[i];
+                    cout << "Enter the amount: " << endl;
+                    cin >> amount[i];
+                    s++;
+                    if ((s == 1) && (b > 1))
                     {
-                        cout << ".";
-                        Sleep(100);
+                        cout << "1st ";
                     }
-                    system("CLS");
+                    else if ((s == 2) && (b > 1))
+                    {
+                        cout << "2nd ";
+                    }
+                    else if ((s == 3) && (b > 1))
+                    {
+                        cout << "3rd ";
+                    }
+                    else if ((s > 3) && (b > 1))
+                    {
+                        cout << i+1 << "th ";
+                    }
+                    if (b > 1)
+                    {
+                        cout << "Account is created" << endl;
+                        for (int i = 0; i < 4; i++)
+                        {
+                            cout << ".";
+                            Sleep(100);
+                        }
+                        system("CLS");
+                    }
+                }
+                a = a + b;
+                if (s == 1)
+                {
+                    cout << "Your Account is Created Successfully" << endl;
+                }
+                else
+                {
+                    cout << "Your Account's are Created Successfully" << endl;
+                }
+                for (int i = 0; i < 4; i++)
+                {
+                    cout << ".";
+                    Sleep(250);
                 }
             }
-            a = a + b;
-            if (s == 1)
-            {
-                cout << "Your Account is Created Successfully" << endl;
-            }
-            else
-            {
-                cout << "Your Account's are Created Successfully" << endl;
-            }
-            for (int i = 0; i < 4; i++)
-            {
-                cout << ".";
-                Sleep(250);
+            if(b<=0){
+                cout<<"No Account's are created."<<endl;
+                system("PAUSE");
             }
             system("CLS");
         }
